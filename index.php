@@ -3,30 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
-    <style>
-        body {
-            display: grid;
-            place-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-        }
-    </style>
 </head>
 <body>
     <?php
-        $name = "Dark Matter";
-        $read = true;
-
-
-        if($read) {
-            $message = "You have read the \"$name\"";
-        } else {
-            $message = "You have not read the \"$name\"";
-        }
+        $books = [
+            'Do Androids Dream of Electric Sheep',
+            'The Langoriels', 
+            'Hail Mary',
+        ];
     ?>
-    <h1>
-        <?= $message ?>
-    </h1>
+    <h1>Recommended Books</h1>
+
+    <ul>
+        <?php foreach($books as $book) : ?>
+            <li><?= $book ?></li> 
+        <?php endforeach ?>
+    </ul>
 </body>
-</html>
+</html> 
