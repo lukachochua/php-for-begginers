@@ -8,7 +8,7 @@ $currentUserId = 3;
 
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {    
-    $note = $db->query('select * from notes where id = :id', [
+    $note = $db->query('SELECT * from notes where id = :id', [
         'id' => $_GET['id']
     ])->findOrFail();
 
