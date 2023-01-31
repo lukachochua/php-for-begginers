@@ -9,6 +9,11 @@
         </p>
 
         <p><?= htmlspecialchars($note['body']) ?></p>
+
+        <form class="mt-6" method="POST">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
+            <button class="text-sm text-red-500 p-2 bg-blue-200 rounded rounded-xl font-bold hover:bg-blue-300">Delete</button>
+        </form>
     </div>
 </main>
 
