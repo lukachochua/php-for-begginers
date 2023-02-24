@@ -2,9 +2,9 @@
 
 namespace Core;
 
-class App 
+class App
 {
-    static $container;
+    protected static $container;
 
     public static function setContainer($container)
     {
